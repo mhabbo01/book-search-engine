@@ -29,8 +29,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-const startApolloServer = async (typeDefs, resolvers) => {
-  await server.start();
+// const startApolloServer = async (typeDefs, resolvers) => {
+//   await server.start();
 
   server.applyMiddleware({ app });
 
@@ -41,10 +41,10 @@ const startApolloServer = async (typeDefs, resolvers) => {
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     });
   });
-}
+// }
 
 // app.use(routes);
 
-startApolloServer(typeDefs, resolvers);
+// startApolloServer(typeDefs, resolvers);
 
 
